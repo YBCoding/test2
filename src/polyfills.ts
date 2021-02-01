@@ -63,3 +63,14 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+
+/**
+ * Angular 6+ Support
+ * Currently, the newest versions of Angular (6+) do not include shims for ‘global’ or ‘process’ as provided in previous versions.
+ * Add the following to your src/polyfills.ts file to recreate them:
+ */
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
